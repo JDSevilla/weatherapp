@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style src="C:\Users\jdsev\Desktop\msu-det-fsf-pt-11-2020-u-c-master\weather2.css"></style>
+</head>
+
+<body>
+    <h2>Temperature Converter</h2>
+    <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)"
+            onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Celcius: <span id="outputCelcius"></span></p>
+
+    <script>
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+        }
+    </script>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Weather Report</h5>
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </nav>
+        </div>
+    </div>
+
+    <div class="container col-md-9">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div id="currentWeather" class="section"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card"></div>
+        </div>
+    </div>
+</body>
+
+</html>
